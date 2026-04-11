@@ -1,11 +1,21 @@
-<img src="{{ site.owner.avatar | relative_url }}" alt="{{ site.owner.name }}" style="width: 150px; border-radius: 50%;" />
-<div class="about-bio" style="margin-bottom:0.5rem;">
-    <p>
-        I am a third-year Undergraduate student studying Robotics & Computer Science at the University of Michigan
+<div style="display: flex; align-items: flex-start; gap: 1.5rem;">
+
+  <!-- Left: avatar -->
+  <img src="{{ site.owner.avatar | relative_url }}" alt="{{ site.owner.name }}" style="width: 150px; border-radius: 50%; flex-shrink: 0;" />
+
+  <!-- Right: name, bio, buttons -->
+  <div>
+    <h1 style="margin: 0 0 0.5rem 0;">{{ site.owner.name }}</h1>
+
+    <p style="margin: 0 0 1rem 0;">
+      I am a third-year Undergraduate student studying Robotics & Computer Science at the University of Michigan
     </p>
-</div>
-<div style="margin-top: 1rem;">
-    <a href="mailto:{{ site.owner.email }}" style="margin-right: 0.5rem; padding: 0.5rem 1rem; background-color: #555; color: white; text-decoration: none; border-radius: 4px;">Email</a>
-    <a href="{{ site.owner.github }}" style="margin-right: 0.5rem; padding: 0.5rem 1rem; background-color: #555; color: white; text-decoration: none; border-radius: 4px;">GitHub</a>
-    <a href="{{ site.owner.linkedin }}" style="padding: 0.5rem 1rem; background-color: #555; color: white; text-decoration: none; border-radius: 4px;">LinkedIn</a>
+
+    <div>
+      <a href="mailto:{{ site.owner.email }}" style="margin-right: 0.5rem; padding: 0.5rem 1rem; background-color: #555; color: white; text-decoration: none; border-radius: 4px;">Email</a>
+      <a href="http://github.com/{{ site.owner.github }}" style="margin-right: 0.5rem; padding: 0.5rem 1rem; background-color: #555; color: white; text-decoration: none; border-radius: 4px;">GitHub</a>
+      <a href="http://linkedin.com/in/{{ site.owner.linkedin }}" style="padding: 0.5rem 1rem; background-color: #555; color: white; text-decoration: none; border-radius: 4px;">LinkedIn</a>
+    </div>
+  </div>
+
 </div>
