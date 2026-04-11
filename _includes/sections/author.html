@@ -11,11 +11,23 @@
       I am a third-year Undergraduate student studying Robotics & Computer Science at the University of Michigan
     </p>
 
-    <div>
-      <a href="mailto:{{ site.owner.email }}" style="margin-right: 0.5rem; padding: 0.5rem 1rem; background-color: #555; color: white; text-decoration: none; border-radius: 4px;">Email</a>
-      <a href="http://github.com/{{ site.owner.github }}" style="margin-right: 0.5rem; padding: 0.5rem 1rem; background-color: #555; color: white; text-decoration: none; border-radius: 4px;">GitHub</a>
-      <a href="http://linkedin.com/in/{{ site.owner.linkedin }}" style="padding: 0.5rem 1rem; background-color: #555; color: white; text-decoration: none; border-radius: 4px;">LinkedIn</a>
+    <div class="social-links">
+      <a href="mailto:{{ site.owner.email }}">Email</a>
+      <a href="http://github.com/{{ site.owner.github }}">GitHub</a>
+      <a href="http://linkedin.com/in/{{ site.owner.linkedin }}">LinkedIn</a>
     </div>
   </div>
 
 </div>
+
+<style>
+    #author .social-links a {
+        display: inline-block;
+        padding: 0.4rem 0.9rem;
+        background-color: #2d2d2d;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 0.85rem;
+    }
+</style>

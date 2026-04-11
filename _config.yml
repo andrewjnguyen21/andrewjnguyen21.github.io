@@ -4,8 +4,8 @@
 ####################################
 #
 title: Andy Nguyen
-email:
-description: Personal Blog + Website.
+email: andyng@umich.edu
+description: #description
 url: # the base hostname & protocol for your site
 keywords: ["blog", "jekyll"]
 
