@@ -45,9 +45,10 @@
 
     #research .publication-img {
         width: 260px;
+        height: 160px; /* Set a specific height to force the crop */
         flex-shrink: 0;
         border-radius: 6px;
-        object-fit: cover;
+        object-fit: cover; /* This does the actual 'cropping' work */
     }
 
     #research .publication-venue {
