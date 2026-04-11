@@ -2,23 +2,23 @@
 layout: default
 ---
 <div style="display: flex; flex-direction: column; gap: 2rem; align-items: flex-start; padding: 2rem 0;">
-  
-  <!-- Author section at top -->
-  <div style="width: 100%; text-align: center;">
-    {% include sections/author.html %}
-  </div>
 
-<!-- Main content -->
-<div style="display: flex; gap: 2rem; width: 100%;">
-    <!-- Left column -->
-    <div style="flex: 1;">
-        {% include sections/research.html %}
-        {% include sections/projects.html %}
+    <!-- Author section at top -->
+    <div style="width: 100%; text-align: center;">
+        {% include sections/author.html %}
     </div>
-    <!-- Right column -->
-    <div style="flex: 1;">
-        {% include sections/education.html %}
+
+    <!-- Main content -->
+    <div style="display: flex; gap: 2rem; width: 100%;">
+        <!-- Left column -->
+        <div style="flex: 4;">
+            {% include sections/research.html %}
+            {% include sections/projects.html %}
+        </div>
+        <!-- Right column -->
+        <div style="flex: 1;">
+            {% include sections/education.html %}
+        </div>
     </div>
-</div>
 
 </div>
