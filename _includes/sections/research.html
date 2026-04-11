@@ -1,57 +1,94 @@
 <section id="research">
     <h2>Publications</h2>
-    
+
     <div class="publication">
-        <h3>Publication Title</h3>
-        <p class="authors">Andrew Nguyen, Mingyuan Li, Daniel Bruder</p>
-        <p class="year">2024</p>
-        
         <div class="publication-content">
-            <img src="/assets/images/publication-demo.gif" alt="Publication visualization" class="publication-gif">
-            
+
+            <!-- Left: image/gif -->
+            <img src="/assets/images/publications/wall-climbing.gif" alt="Wall climbing robot" class="publication-img">
+
+            <!-- Right: details -->
             <div class="publication-details">
-                <p class="abstract">Brief abstract or description of the publication goes here.</p>
-                <a href="https://example.com/paper.pdf" class="paper-link" target="_blank">Read Paper</a>
+                <span class="publication-venue">ICRA 2026 · Vienna</span>
+                <h3>A High-Payload Wall-Climbing Robot Using Passive Bistable Suction Cups</h3>
+                <p class="authors"><strong>Andrew Nguyen</strong>, Mingyuan Li, Daniel Bruder</p>
+                <div class="publication-links">
+                    <a href="https://example.com/paper.pdf" target="_blank">📄 Paper</a>
+                    <!-- <a href="https://example.com" target="_blank">🏠 Website</a> -->
+                </div>
             </div>
+
         </div>
     </div>
 
 </section>
 
 <style>
+    #research h2 {
+        margin-bottom: 1.5rem;
+    }
+
     #research .publication {
-        margin-bottom: 2rem;
-        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding: 1.25rem;
         border: 1px solid #ddd;
         border-radius: 8px;
+        background-color: #fafafa;
     }
 
     #research .publication-content {
         display: flex;
         gap: 1.5rem;
-        margin-top: 1rem;
+        align-items: center;
     }
 
-    #research .publication-gif {
-        max-width: 300px;
-        border-radius: 4px;
+    #research .publication-img {
+        width: 260px;
+        flex-shrink: 0;
+        border-radius: 6px;
+        object-fit: cover;
     }
 
-    #research .publication-details {
-        flex: 1;
-    }
-
-    #research .paper-link {
+    #research .publication-venue {
         display: inline-block;
-        margin-top: 1rem;
-        padding: 0.5rem 1rem;
-        background-color: #0969da;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        padding: 0.2rem 0.5rem;
+        margin-bottom: 0.5rem;
+        color: #555;
+    }
+
+    #research .publication-details h3 {
+        margin: 0.4rem 0 0.4rem 0;
+        font-size: 1rem;
+    }
+
+    #research .authors {
+        margin: 0 0 1rem 0;
+        color: #444;
+        font-size: 0.9rem;
+    }
+
+    #research .publication-links {
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    #research .publication-links a {
+        display: inline-block;
+        padding: 0.4rem 0.9rem;
+        background-color: #2d2d2d;
         color: white;
         text-decoration: none;
         border-radius: 4px;
+        font-size: 0.85rem;
     }
 
-    #research .paper-link:hover {
-        background-color: #0860ca;
+    #research .publication-links a:hover {
+        background-color: #444;
     }
 </style>
