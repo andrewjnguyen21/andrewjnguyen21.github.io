@@ -1,17 +1,18 @@
 ---
 layout: default
 ---
-
-<div style="display: flex; gap: 2rem; align-items: flex-start; padding: 2rem 0;">
+<div style="display: flex; flex-direction: column; gap: 2rem; align-items: flex-start; padding: 2rem 0;">
   
-  <!-- Left sidebar -->
-  <div style="flex: 0 0 200px; text-align: center;">
+  <!-- Author section at top -->
+  <div style="width: 100%; text-align: center;">
     {% include sections/author.html %}
   </div>
 
   <!-- Main content -->
-  <div style="flex: 1;">
-    {{ content }}
+  <div style="flex: 1; width: 100%;">
+    {% include sections/education.html}
+    {% include sections/research.html}
+    {% include sections/projects.html}
   </div>
 
 </div>
