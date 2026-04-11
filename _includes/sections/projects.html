@@ -1,37 +1,129 @@
-<div class="projects-list">
+<section id="projects">
     <h2>Projects</h2>
-    <div class="project-card">
-        <img src="project-image.jpg" alt="Project title">
-        <h3>2023 FTC Robot</h3>
-        <p class="duration">Duration: Sep 2022 - Apr 2023</p>
-        <p class="description">Brief description of the project goes here.</p>
+
+    <div class="project">
+        <div class="project-content">
+            <img src="/assets/images/projects/ftc-2023.gif" alt="2023 FTC Robot" class="project-img">
+            <div class="project-details">
+                <span class="project-duration">Sep 2022 · Apr 2023</span>
+                <h3>2023 FTC Robot</h3>
+                <p class="project-description">Brief description of the project goes here.</p>
+                <div class="project-links">
+                    <a href="https://example.com" target="_blank">🎬 Video</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="project-card">
-        <img src="project-image.jpg" alt="Project title">
-        <h3>2022 FTC Robot</h3>
-        <p class="duration">Duration: Sep 2021 - Apr 2022</p>
-        <p class="description">Brief description of the project goes here.</p>
-    </div>
-    
-    <div class="project-card">
-        <img src="project-image.jpg" alt="Project title">
-        <h3>2021 FTC Robot</h3>
-        <p class="duration">Duration: Sep 2020 - Apr 2021</p>
-        <p class="description">Brief description of the project goes here.</p>
-    </div>
-
-    <div class="project-card">
-        <img src="project-image.jpg" alt="Project title">
-        <h3>2020 FTC Robot</h3>
-        <p class="duration">Duration: Sep 2019 - Apr 2020</p>
-        <p class="description">Brief description of the project goes here.</p>
+    <div class="project">
+        <div class="project-content">
+            <img src="/assets/images/projects/ftc-2022.gif" alt="2022 FTC Robot" class="project-img">
+            <div class="project-details">
+                <span class="project-duration">Sep 2021 · Apr 2022</span>
+                <h3>2022 FTC Robot</h3>
+                <p class="project-description">Brief description of the project goes here.</p>
+                <div class="project-links">
+                    <a href="https://example.com" target="_blank">🎬 Video</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="project-card">
-        <img src="project-image.jpg" alt="Project title">
-        <h3>2019 FTC Robot</h3>
-        <p class="duration">Duration: Sep 2018 - Apr 2019</p>
-        <p class="description">Brief description of the project goes here.</p>
+    <div class="project">
+        <div class="project-content">
+            <img src="/assets/images/projects/ftc-2021.gif" alt="2021 FTC Robot" class="project-img">
+            <div class="project-details">
+                <span class="project-duration">Sep 2020 · Apr 2021</span>
+                <h3>2021 FTC Robot</h3>
+                <p class="project-description">Brief description of the project goes here.</p>
+                <div class="project-links">
+                    <a href="https://example.com" target="_blank">🎬 Video</a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
+    <div class="project">
+        <div class="project-content">
+            <img src="/assets/images/projects/ftc-2020.gif" alt="2020 FTC Robot" class="project-img">
+            <div class="project-details">
+                <span class="project-duration">Sep 2019 · Apr 2020</span>
+                <h3>2020 FTC Robot</h3>
+                <p class="project-description">Brief description of the project goes here.</p>
+                <div class="project-links">
+                    <a href="https://example.com" target="_blank">🎬 Video</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #projects h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    #projects .project {
+        margin-bottom: 1.5rem;
+        padding: 1.25rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fafafa;
+    }
+
+    #projects .project-content {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    #projects .project-img {
+        width: 260px;
+        flex-shrink: 0;
+        border-radius: 6px;
+        object-fit: cover;
+    }
+
+    #projects .project-duration {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        padding: 0.2rem 0.5rem;
+        margin-bottom: 0.5rem;
+        color: #555;
+    }
+
+    #projects .project-details h3 {
+        margin: 0.4rem 0 0.4rem 0;
+        font-size: 1rem;
+    }
+
+    #projects .project-description {
+        margin: 0 0 1rem 0;
+        color: #444;
+        font-size: 0.9rem;
+    }
+
+    #projects .project-links {
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    #projects .project-links a {
+        display: inline-block;
+        padding: 0.4rem 0.9rem;
+        background-color: #2d2d2d;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 0.85rem;
+    }
+
+    #projects .project-links a:hover {
+        background-color: #444;
+    }
+</style>
