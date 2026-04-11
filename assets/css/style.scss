@@ -13,3 +13,7 @@
 .site-title {
   display: none;
 }
+
+.site-title, .masthead__menu-item--lg {
+    display: none !important;
+}

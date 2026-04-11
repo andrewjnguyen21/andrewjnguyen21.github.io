@@ -1,4 +1,4 @@
-<div style="display: flex; align-items: center; gap: 1.5rem; text-align: left; justify-content: center; padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid #e0e0e0;">
+<div id="author" style="display: flex; align-items: center; gap: 1.5rem; text-align: left; justify-content: center; padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid #e0e0e0;">
 
   <!-- Left: avatar -->
   <img src="{{ site.owner.avatar | relative_url }}" alt="{{ site.owner.name }}" style="width: 150px; border-radius: 50%; flex-shrink: 0;" />
@@ -29,5 +29,6 @@
         text-decoration: none;
         border-radius: 4px;
         font-size: 0.85rem;
+        transition: background-color 0.2s ease;
     }
 </style>
