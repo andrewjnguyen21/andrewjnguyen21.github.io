@@ -6,6 +6,10 @@
   padding: 0 2rem !important;
 }
 
+.container-lg > h1:first-child {
+  display: none !important;
+}
+
 .site-name {
   display: none;
 }
