@@ -1,4 +1,4 @@
-<nav class="site-nav">
+<nav class="main-header">
   <ul>
     {% for link in site.data.navigation.main %}
     <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
@@ -7,9 +7,21 @@
 </nav>
 
 <style>
-  .site-nav {
-    float: right;
-    /* Pushes the menu to the right */
+  .main-header {
+    display: flex;
+    justify-content: space-between; /* Pushes name left, nav right */
+    align-items: center;           /* Perfectly centers them vertically */
+    max-width: 1000px;             /* MATCH THIS to your main content width */
+    margin: 0 auto;                /* Centers the header on the page */
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .site-title {
+    text-decoration: none;
+    color: #333 !important;        /* This kills the purple color */
+    font-weight: 700;
+    font-size: 1.4rem;
   }
 
   .site-nav ul {
