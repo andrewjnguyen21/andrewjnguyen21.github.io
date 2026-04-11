@@ -1,5 +1,6 @@
 <nav class="main-header">
-  <ul>
+  <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+  <ul class="site-nav">
     {% for link in site.data.navigation.main %}
     <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
     {% endfor %}
@@ -9,27 +10,29 @@
 <style>
   .main-header {
     display: flex;
-    justify-content: space-between; /* Pushes name left, nav right */
-    align-items: center;           /* Perfectly centers them vertically */
-    max-width: 1000px;             /* MATCH THIS to your main content width */
-    margin: 0 auto;                /* Centers the header on the page */
-    padding: 1.5rem 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
     border-bottom: 1px solid #eee;
   }
 
   .site-title {
     text-decoration: none;
-    color: #333 !important;        /* This kills the purple color */
+    color: #333 !important;
     font-weight: 700;
     font-size: 1.4rem;
   }
 
-  .site-nav ul {
+  .site-nav {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     gap: 2rem;
+  }
+
+  .site-nav li {
+    list-style: none;
   }
 
   .site-nav a {

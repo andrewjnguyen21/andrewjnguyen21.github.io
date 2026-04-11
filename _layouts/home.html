@@ -1,49 +1,28 @@
-<nav class="main-header">
-  <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
-  <ul class="site-nav">
-    {% for link in site.data.navigation.main %}
-    <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
-    {% endfor %}
-  </ul>
-</nav>
+---
+layout: default
+---
 
-<style>
-  .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    border-bottom: 1px solid #eee;
-  }
+{% include sections/header.html %}
 
-  .site-title {
-    text-decoration: none;
-    color: #333 !important;
-    font-weight: 700;
-    font-size: 1.4rem;
-  }
+<div style="display: flex; flex-direction: column; gap: 2rem; align-items: flex-start; padding: 2rem 0;">
 
-  .site-nav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 2rem;
-  }
+    <!-- Author section at top -->
+    <div style="width: 100%; text-align: center;">
+        {% include sections/author.html %}
+    </div>
 
-  .site-nav li {
-    list-style: none;
-  }
+    <!-- Main content -->
+    <div style="display: flex; gap: 2rem; width: 100%;">
+        <!-- Left column -->
+        <div style="flex: 3;">
+            {% include sections/research.html %}
+            {% include sections/projects.html %}
+        </div>
+        <!-- Right column -->
+        <div style="flex: 1;">
+            {% include sections/education.html %}
+            {% include sections/experience.html %}
+        </div>
+    </div>
 
-  .site-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: color 0.2s;
-  }
-
-  .site-nav a:hover {
-    color: #00274c;
-  }
-</style>
+</div>
