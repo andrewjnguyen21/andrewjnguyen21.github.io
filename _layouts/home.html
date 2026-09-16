@@ -4,25 +4,26 @@ layout: default
 
 {% include sections/header.html %}
 
-<div style="display: flex; flex-direction: column; gap: 2rem; align-items: flex-start; padding: 2rem 0;">
-
-    <!-- Author section at top -->
-    <div style="width: 100%; text-align: center;">
-        {% include sections/author.html %}
-    </div>
-
-    <!-- Main content -->
-    <div style="display: flex; gap: 2rem; width: 100%;">
-        <!-- Left column -->
-        <div style="flex: 3;">
-            {% include sections/research.html %}
-            {% include sections/projects.html %}
+<main class="home-main">
+    <div class="home-grid">
+        <div class="primary-column">
+            {% include sections/author.html %}
         </div>
-        <!-- Right column -->
-        <div style="flex: 1;">
+
+        <aside class="sidebar-column" aria-label="Education">
             {% include sections/education.html %}
-            {% include sections/experience.html %}
-        </div>
+        </aside>
     </div>
 
-</div>
+    <div class="home-grid">
+        <div class="primary-column">
+            {% include sections/research.html %}
+        </div>
+
+        <aside class="sidebar-column" aria-label="Experience">
+            {% include sections/experience.html %}
+        </aside>
+    </div>
+
+    {% include sections/projects.html %}
+</main>

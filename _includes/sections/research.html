@@ -1,137 +1,53 @@
-<section id="research">
-    <h2>Publications</h2>
-
-    <div class="publication">
-        <div class="publication-content">
-
-            <!-- Left: image/gif -->
-            <img src="/assets/gifs/wall-climbing-with-payload-short.gif" alt="Wall climbing robot" class="publication-img">
-
-            <!-- Right: details -->
-            <div class="publication-details">
-                <span class="publication-venue">ICRA 2026 · Vienna</span>
-                <h3>A High-Payload Wall-Climbing Robot Using Passive Bistable Suction Cups</h3>
-                <p class="authors"><strong>Andrew Nguyen</strong>, Mingyuan Li, Daniel Bruder</p>
-                <div class="publication-links">
-                    <a href="https://example.com/paper.pdf" target="_blank">📄 Paper (Coming soon)</a>
-                    <a href="https://www.youtube.com/watch?v=xeWG5IHMbxI" target="_blank">🎬 Video</a>
-                    <!-- <a href="https://example.com" target="_blank">🏠 Website</a> -->
-                </div>
-            </div>
-
-        </div>
+<section class="research-section" id="research" aria-labelledby="research-title">
+    <div class="section-heading">
+        <!-- <p class="eyebrow">Selected work</p> -->
+        <h2 id="research-title">Publications</h2>
     </div>
 
-    <!-- <div class="publication">
+    <article class="publication publication-featured">
         <div class="publication-content">
-
-            Left: image/gif
-            <img src="/assets/example.gif" alt="Heatmap Grasping" class="publication-img">
-
-            Right: details
+            <img src="{{ '/assets/gifs/wall-climbing-with-payload-short.gif' | relative_url }}"
+                alt="Wall-climbing robot carrying a payload up a vertical surface" class="publication-img">
             <div class="publication-details">
-                <span class="publication-venue">In preperation</span>
-                <h3>Three Points Are Enough: A Minimal Object-Centric Interface for Generalizable RL Grasping</h3>
-                <p class="authors"><strong>Andrew Nguyen</strong>, Yonghyeon Lee, Sangbae Kim</p>
+                <p class="publication-venue">ICRA 2026 · Vienna</p>
+                <h3>A High-Payload Wall-Climbing Robot Using Passive Bistable Suction Cups</h3>
+                <p class="authors"><strong>Andrew Nguyen</strong>, Mingyuan Li, Daniel Bruder</p>
+                <p class="publication-status">Presented at ICRA 2026</p>
                 <div class="publication-links">
-                    <a href="https://example.com/paper.pdf" target="_blank">📄 Paper (Coming soon)</a>
-                    <a href="https://example.com/video.mp4" target="_blank">🎬 Video</a>
+                    <a href="https://example.com/paper.pdf" target="_blank" rel="noopener noreferrer">Paper (coming
+                        soon)</a>
+                    <a href="https://www.youtube.com/watch?v=xeWG5IHMbxI" target="_blank"
+                        rel="noopener noreferrer">Watch video</a>
                 </div>
             </div>
-
         </div>
-    </div> -->
+    </article>
 
-    <!-- <div class="publication">
+    <article class="publication publication-text">
         <div class="publication-content">
-
-            Left: image/gif
-            <img src="/assets/example.gif" alt="Table Tennis" class="publication-img">
-
-            Right: details
+            <img src="{{ '/assets/gifs/grasping.gif' | relative_url }}"
+                alt="Grasping" class="publication-img">
             <div class="publication-details">
-                <span class="publication-venue">In preperation</span>
-                <h3>Table Tennis Robot</h3>
-                <p class="authors">David Nguyen, <strong>Andrew Nguyen</strong>, Annika Marschner, Sangbae Kim</p>
+                <p class="publication-venue">ICRA 2027 · Seoul</p>
+                <h3>Steerable and Reactive Grasping Through Modular Design with a Three-Point Interface</h3>
+                <p class="authors"><strong>Andrew Nguyen</strong>, Yonghyeon Lee<sup>†</sup>, Sangbae Kim<sup>†</sup>
+                </p>
+                <p class="publication-status">Under review · † Co-corresponding authors</p>
                 <div class="publication-links">
-                    <a href="https://example.com/paper.pdf" target="_blank">📄 Paper (Coming soon)</a>
-                    <a href="https://example.com/video.mp4" target="_blank">🎬 Video</a>
+                    <a href="https://example.com/paper.pdf" target="_blank" rel="noopener noreferrer">Paper (coming
+                        soon)</a>
+                    <a href="https://example.com/video.mpt" target="_blank" rel="noopener noreferrer">Watch video
+                        (coming soon)</a>
                 </div>
             </div>
-
         </div>
-    </div> -->
 
+    </article>
+
+    <article class="publication publication-text">
+        <p class="publication-venue">TBD · 2026</p>
+        <h3>Deceptive Table Tennis Using Reinforcement Learning on Contact-Implicit MPC</h3>
+        <p class="authors">David Nguyen, Annika Marschner, <strong>Andrew Nguyen</strong>, Sangbae Kim</p>
+        <p class="publication-status">In prep</p>
+    </article>
 </section>
-
-<style>
-    #research h2 {
-        margin-bottom: 1.5rem;
-    }
-
-    #research .publication {
-        margin-bottom: 1.5rem;
-        padding: 1.25rem;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background-color: #fafafa;
-    }
-
-    #research .publication-content {
-        display: flex;
-        gap: 1.5rem;
-        align-items: center;
-    }
-
-    #research .publication-img {
-        width: 260px;
-        height: 200px;
-        flex-shrink: 0;
-        border-radius: 6px;
-        object-fit: cover;
-    }
-
-    #research .publication-venue {
-        display: inline-block;
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        border: 1px solid #aaa;
-        border-radius: 4px;
-        padding: 0.2rem 0.5rem;
-        margin-bottom: 0.5rem;
-        color: #555;
-    }
-
-    #research .publication-details h3 {
-        margin: 0.4rem 0 0.4rem 0;
-        font-size: 1rem;
-    }
-
-    #research .authors {
-        margin: 0 0 1rem 0;
-        color: #444;
-        font-size: 0.9rem;
-    }
-
-    #research .publication-links {
-        display: flex;
-        gap: 0.75rem;
-    }
-
-    #research .publication-links a {
-        display: inline-block;
-        padding: 0.4rem 0.9rem;
-        background-color: #2d2d2d;
-        color: white;
-        text-decoration: none;
-        border-radius: 4px;
-        font-size: 0.85rem;
-        transition: background-color 0.2s ease;
-    }
-
-    #research .publication-links a:hover {
-        background-color: #444;
-    }
-</style>

@@ -1,4 +1,4 @@
-<nav class="main-header">
+<nav class="main-header" aria-label="Main navigation">
   <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
   <ul class="site-nav">
     {% for link in site.data.navigation.main %}
@@ -6,44 +6,3 @@
     {% endfor %}
   </ul>
 </nav>
-
-<style>
-  .main-header {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    border-bottom: 1px solid #eee;
-  }
-
-  .site-title {
-    text-decoration: none;
-    color: #333 !important;
-    font-weight: 700;
-    font-size: 1.4rem;
-  }
-
-  .site-nav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 2rem;
-  }
-
-  .site-nav li {
-    list-style: none;
-  }
-
-  .site-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: color 0.2s;
-  }
-
-  .site-nav a:hover {
-    color: #00274c;
-  }
-</style>

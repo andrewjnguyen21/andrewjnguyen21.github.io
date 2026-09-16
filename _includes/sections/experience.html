@@ -1,79 +1,75 @@
-<section class="experience">
-    <h2>Experience</h2>
+<section class="experience-section" id="experience" aria-labelledby="experience-title">
+    <div class="section-heading">
+        <!-- <p class="eyebrow">Selected roles</p> -->
+        <h2 id="experience-title">Experience</h2>
+    </div>
+
     <div class="experience-grid">
+        <article class="experience-card">
+            <div class="experience-heading">
+                <div>
+                    <h3 class="company-name">FREE Lab</h3>
+                    <p class="role">Undergraduate Research Assistant</p>
+                </div>
+                <p class="year">Aug 2023 – Present</p>
+            </div>
+            <ul class="experience-highlights">
+                <li>Developed a simulation and control stack for interconnected fixed-wing UAV formations, implementing Circle/Flying-V and waypoint-following controllers.</li>
+                <li>Designed a passive bistable-suction wall-climbing robot that carried an 8 kg payload on plaster and glass; first author of an ICRA 2026 paper and inventor on a 2025 U.S. provisional patent application.</li>
+            </ul>
+        </article>
 
-        <div class="experience-card">
-            <p class="company-name">ROAHM / ARCAD Lab (Project with Schaeffler)</p>
-            <p class="role">Robotics Simulation Engineer</p>
-            <p class="year">Sep 2025 - Present</p>
-            <!-- <p class="description">Brief description of what you did here.</p> -->
-        </div>
+        <article class="experience-card">
+            <div class="experience-heading">
+                <div>
+                    <h3 class="company-name">Biomimetic Robotics Lab, MIT</h3>
+                    <p class="role">Visiting Student</p>
+                </div>
+                <p class="year">May – Aug. 2026</p>
+            </div>
+            <ul class="experience-highlights">
+                <li>Developed a three-finger grasping framework combining geometry-based affordances, reactive reaching, and tactile/proprioceptive RL, with hardware demonstrations on seen and unseen objects; first author of a 2027 ICRA paper (under review).</li>
+                <li>Implemented 220 Hz YOLO-based ball localization for a table-tennis-playing robot and assisted in MPC controller hardware integration and testing.</li>
+            </ul>
+        </article>
 
-        <div class="experience-card">
-            <p class="company-name">FREE Lab</p>
-            <p class="role">Undergraduate Research Assistant</p>
-            <p class="year">Aug 2023 - Present</p>
-            <!-- <p class="description">Brief description of what you did here.</p> -->
-        </div>
+        <article class="experience-card">
+            <div class="experience-heading">
+                <div>
+                    <h3 class="company-name">ROAHM / ARCAD Lab <span>(Schaeffler project)</span></h3>
+                    <p class="role">Robotics Simulation Engineer</p>
+                </div>
+                <p class="year">Sep. 2025 – May 2026</p>
+            </div>
+            <ul class="experience-highlights">
+                <li>Integrated actuator dynamics and a reinforcement-learning locomotion policy into a MuJoCo humanoid simulation, validated against hardware dynamometer data.</li>
+                <li>Evaluated humanoid tasks with trajectory optimization and whole-body control; developed hybrid analytical-neural actuator models.</li>
+            </ul>
+        </article>
 
-        <div class="experience-card">
-            <p class="company-name">RAI Institute (Formerly Boston Dynamics  AI Institute)</p>
-            <p class="role">Hardware Intern</p>
-            <p class="year">May 2025 - Aug 2025</p>
-            <!-- <p class="description">Brief description of what you did here.</p> -->
-        </div>
 
-        <div class="experience-card">
-            <p class="company-name">RAI Institute (Formerly Boston Dynamics  AI Institute)</p>
-            <p class="role">Hardware Intern</p>
-            <p class="year">May 2024 - Aug 2025</p>
-            <!-- <p class="description">Brief description of what you did here.</p> -->
-        </div>
+        <article class="experience-card">
+            <div class="experience-heading">
+                <div>
+                    <h3 class="company-name">RAI Institute <span>(formerly Boston Dynamics AI Institute)</span></h3>
+                    <p class="role">Hardware Intern</p>
+                </div>
+                <p class="year">May – Aug. 2024 and 2025</p>
+            </div>
+            <ul class="experience-highlights">
+                <li>Built an automated Python motor-dynamometer test suite and analyzed actuator friction and torque-velocity behavior.</li>
+                <li>Designed a 1-DOF camera mount and assembled 40 quasi-direct-drive actuators using custom test fixtures.</li>
+            </ul>
+        </article>
 
-        <div class="experience-card">
-            <p class="company-name">The Brainstormers</p>
-            <p class="role">Team Captain, Head Robot Designer, Software Lead</p>
-            <p class="year">Sep 2012 - Apr 2023</p>
-            <!-- <p class="description">Brief description of what you did here.</p> -->
-        </div>
+        <article class="experience-card experience-card-compact">
+            <div class="experience-heading">
+                <div>
+                    <h3 class="company-name">The Brainstormers</h3>
+                    <p class="role">Team Captain · Head Robot Designer · Software Lead</p>
+                </div>
+                <p class="year">2012 – 2023</p>
+            </div>
+        </article>
     </div>
 </section>
-
-<style>
-    .experience-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .experience-card {
-        padding: 20px;
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        background-color: #f9f9f9;
-    }
-
-    .company-name {
-        font-weight: bold;
-        color: #555;
-        margin: 0 0 0.25rem 0;
-    }
-
-    .role {
-        color: #777;
-        margin: 0 0 0.25rem 0;
-    }
-
-    .year {
-        font-style: italic;
-        color: #999;
-        margin: 0 0 0.5rem 0;
-    }
-
-    .description {
-        color: #555;
-        font-size: 0.9rem;
-        margin: 0;
-    }
-</style>
