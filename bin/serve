@@ -1,0 +1,7 @@
+#!/bin/sh
+
+exec /usr/bin/ruby -S bundle _1.17.2_ exec /usr/bin/ruby -S jekyll serve \
+  --host 127.0.0.1 \
+  --port 4000 \
+  --livereload \
+  "$@"
