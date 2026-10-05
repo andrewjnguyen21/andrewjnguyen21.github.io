@@ -3,3 +3,22 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 vendor/
+
+# Overleaf Connect
+.overleafconnect
+*.aux
+*.log
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.out
+*.toc
+*.pdf
+*.nav
+*.snm
+*.vrb
+*.lot
+*.lof
+%OUTDIR%/
