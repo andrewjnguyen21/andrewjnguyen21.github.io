@@ -1,0 +1,129 @@
+- id: wall-climbing
+  result: Demonstrated an 8 kg payload on plaster and glass; first-author ICRA 2026 paper and a 2025 U.S. provisional patent application.
+  problem: Carry payloads on vertical surfaces using passive bistable suction cups.
+  role_summary: Mechanism design & payload testing
+  group: research
+  title: High-payload wall climbing
+  category: Mechanical design · Control
+  lab: FREE Lab · University of Michigan
+  period: 2023–present
+  status: ICRA 2026
+  image: wall-climbing
+  featured: true
+  summary: Passive suction enables an 8 kg payload on plaster and glass.
+  contribution: I designed the passive bistable-suction wall-climbing robot and evaluated its payload capability on plaster and glass.
+  tags: [Mechanism design, Suction, Hardware validation]
+  publication: wall-climbing-paper
+  publication_year: 2026
+  paper_title: A High-Payload Wall-Climbing Robot Using Passive Bistable Suction Cups
+  authors: '<strong>Andrew Nguyen</strong>, Mingyuan Li, Daniel Bruder'
+  venue: ICRA 2026 · Vienna
+  paper: https://arxiv.org/abs/2609.21584
+  video: https://www.youtube.com/watch?v=xeWG5IHMbxI
+  website: https://bistable-suction-cup-wall-climbing.github.io/
+- id: grasping
+  result: Hardware demonstrations on seen and unseen objects; first-author manuscript currently under review.
+  problem: Connect object geometry, reactive reaching, and tactile feedback in a modular grasping framework.
+  role_summary: Grasping framework & hardware validation
+  group: research
+  title: Steerable & reactive grasping
+  category: Manipulation · Learning
+  lab: Biomimetic Robotics Lab · MIT
+  period: May–Aug. 2026
+  status: Under review
+  image: grasping
+  featured: true
+  summary: Modular three-finger grasping with reactive reaching and tactile feedback.
+  contribution: I developed the three-finger grasping framework, combining geometry-based affordances, reactive reaching, and tactile/proprioceptive reinforcement learning, and demonstrated it on hardware.
+  tags: [Reactive manipulation, Reinforcement learning, Tactile sensing]
+  publication: grasping-paper
+  paper_title: Steerable and Reactive Grasping Through Modular Design with a Three-Point Interface
+  authors: '<strong>Andrew Nguyen</strong>, Yonghyeon Lee<sup>†</sup>, Sangbae Kim<sup>†</sup>'
+  author_note: † Co-corresponding authors
+  venue: Under review
+  paper: https://arxiv.org/abs/2609.24896
+  video: https://youtu.be/siW-URWmdz4
+  website: https://heatmap-three-point-interface-grasping.github.io/
+- id: table-tennis
+  publication_only: true
+  title: Table tennis deception
+  category: Perception · Control integration
+  lab: Biomimetic Robotics Lab · MIT
+  period: 2026
+  status: Manuscript in preparation
+  summary: Ball localization and hardware integration for a table-tennis-playing robot.
+  contribution: I implemented 220 Hz YOLO-based ball localization and assisted with MPC controller hardware integration and testing. The related manuscript on table tennis deception using reinforcement learning and contact-implicit MPC is in preparation.
+  tags: [Real-time perception, Model predictive control, System integration]
+  publication: table-tennis-paper
+  paper_title: Table Tennis Deception Using Reinforcement Learning and Contact-Implicit Model Predictive Control
+  authors: 'David Nguyen, Annika Marschner, <strong>Andrew Nguyen</strong>, Sangbae Kim'
+  venue: In preparation
+- id: humanoid-simulation
+  hidden: true
+  title: Bringing actuator dynamics into simulation
+  category: Simulation · Learning
+  lab: ROAHM / ARCAD Lab · Schaeffler project
+  period: Sep. 2025–May 2026
+  status: Research project
+  summary: Connecting a humanoid simulation to measured actuator behavior.
+  contribution: I integrated actuator dynamics and a reinforcement-learning locomotion policy into a MuJoCo humanoid simulation, validated against hardware dynamometer data. I also evaluated tasks using trajectory optimization and whole-body control and developed hybrid analytical-neural actuator models.
+  tags: [MuJoCo, Actuator modeling, Whole-body control]
+- id: uav-formations
+  result: Implemented Circle/Flying-V and waypoint-following controllers in the simulation and control stack.
+  problem: Simulate and coordinate interconnected fixed-wing aircraft in formation.
+  role_summary: Simulation & formation controllers
+  group: research
+  title: Coordinating fixed-wing UAV formations
+  category: Simulation · Control
+  lab: FREE Lab · University of Michigan
+  status: Research project
+  image: uav
+  summary: Simulation and control for interconnected fixed-wing formations.
+  contribution: I developed the simulation and control stack for interconnected fixed-wing UAV formations.
+  tags: [Simulation, Formation control, Waypoint following]
+- id: p-wheel
+  result: Our team ranked first in the cohort and was one of four selected to pitch to venture capitalists.
+  problem: Measure stream velocity without pumps or wall power and provide interactive feedback.
+  role_summary: Mechanism, sensing & embedded feedback
+  group: engineering
+  title: "P-Wheel: fluid-powered flow sensing"
+  category: Design · Embedded systems
+  lab: University of Michigan
+  period: Jan.–Apr. 2025
+  status: Design project
+  image: p-wheel
+  summary: Fluid-driven flow sensing with real-time LED and LCD feedback.
+  contribution: I designed the fluid-driven paddle wheel and encoder sensing system, and built an LED and LCD feedback loop that gamifies aim against cohort high scores.
+  tags: [Mechanical design, Sensing, Embedded feedback]
+- id: ftc
+  result: Team highlights include a 2022 World Championship finalist finish, six state championships, and a 2023 World Championship Innovate Award second-place finish.
+  problem: Design, program, and refine competition robots while leading a team.
+  role_summary: Team captain · Robot design · Software
+  group: engineering
+  title: Competition robotics
+  category: Robot design · Software · Leadership
+  lab: The Brainstormers
+  period: 2012–2023
+  status: Competition robotics
+  image: ftc-2023
+  summary: Competition robots built through years of design, software, and testing.
+  contribution: As team captain, head robot designer, and software lead for The Brainstormers, I led robot design and software and mentored more than 100 teams.
+  tags: [Mechanism design, Robot software, Team leadership]
+  video: https://www.youtube.com/watch?v=-IW37lEXsZs
+  seasons:
+    - year: 2023
+      image: ftc-2023
+      highlights: Chesapeake Winning Alliance Captain · World Championship Innovate Award, 2nd place · Asia Pacific Open Winning Alliance
+      video: https://www.youtube.com/watch?v=-IW37lEXsZs
+    - year: 2022
+      image: ftc-2022
+      highlights: Arkansas Winning Alliance Captain & Inspire Award · World Championship Finalist Alliance · World Championship Control Award Finalist
+      video: https://www.youtube.com/watch?v=6oYI-_P6lgI
+    - year: 2021
+      image: ftc-2021
+      highlights: Massachusetts Top Ranked & Design Award, 2nd place · Vermont Top Ranked & Control Award
+      video: https://www.youtube.com/watch?v=qz6z1-mCeEI&t=8
+    - year: 2020
+      image: ftc-2020
+      highlights: Massachusetts Winning Alliance Captain · Vermont Motivate Award
+      video: https://www.youtube.com/watch?v=yYkN1FEluzc

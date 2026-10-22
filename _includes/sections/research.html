@@ -1,62 +1,25 @@
-<section class="research-section" id="research" aria-labelledby="research-title">
-    <div class="section-heading">
-        <!-- <p class="eyebrow">Selected work</p> -->
-        <h2 id="research-title">Publications</h2>
-    </div>
-
-    <article class="publication publication-text publication-placeholder-card publication-featured">
-        <div class="publication-content">
-            <div class="publication-img publication-placeholder" aria-hidden="true">
-                <span>Image coming soon</span>
-            </div>
-            <div class="publication-details">
-                <p class="publication-venue">In prep</p>
-                <h3>Table Tennis Deception Using Reinforcement Learning and Contact-Implicit Model Predictive Control
-                </h3>
-                <p class="authors">David Nguyen, Annika Marschner, <strong>Andrew Nguyen</strong>, Sangbae Kim</p>
-                <!-- <p class="publication-status">In prep</p> -->
-            </div>
-        </div>
-    </article>
-
-    <article class="publication">
-        <div class="publication-content">
-            <img src="{{ '/assets/gifs/grasping.gif' | relative_url }}" alt="Grasping" class="publication-img">
-            <div class="publication-details">
-                <p class="publication-venue">Under review</p>
-                <h3>Steerable and Reactive Grasping Through Modular Design with a Three-Point Interface</h3>
-                <p class="authors"><strong>Andrew Nguyen</strong>, Yonghyeon Lee<sup>†</sup>, Sangbae Kim<sup>†</sup>
-                </p>
-                <p class="publication-status">† Co-corresponding authors</p>
-                <div class="publication-links">
-                    <a href="https://arxiv.org/abs/2609.24896" target="_blank" rel="noopener noreferrer">Paper</a>
-                    <a href="https://youtu.be/siW-URWmdz4" target="_blank" rel="noopener noreferrer">Video</a>
-                    <a href="https://heatmap-three-point-interface-grasping.github.io/" target="_blank"
-                        rel="noopener noreferrer">Website</a>
-                </div>
-            </div>
-        </div>
-
-    </article>
-
-    <article class="publication publication-text">
-        <div class="publication-content">
-            <img src="{{ '/assets/gifs/wall-climbing-with-payload-short.gif' | relative_url }}"
-                alt="Wall-climbing robot carrying a payload up a vertical surface" class="publication-img">
-            <div class="publication-details">
-                <p class="publication-venue">ICRA 2026 · Vienna</p>
-                <h3>A High-Payload Wall-Climbing Robot Using Passive Bistable Suction Cups</h3>
-                <p class="authors"><strong>Andrew Nguyen</strong>, Mingyuan Li, Daniel Bruder</p>
-                <!-- <p class="publication-status">Presented at ICRA 2026</p> -->
-                <div class="publication-links">
-                    <a href="https://arxiv.org/abs/2609.21584" target="_blank" rel="noopener noreferrer">Paper</a>
-                    <a href="https://www.youtube.com/watch?v=xeWG5IHMbxI" target="_blank"
-                        rel="noopener noreferrer">Video</a>
-                    <a href="https://bistable-suction-cup-wall-climbing.github.io/" target="_blank"
-                        rel="noopener noreferrer">Website</a>
-                </div>
-            </div>
-        </div>
-    </article>
-
+<section class="publications-section" id="publications" aria-labelledby="publications-title">
+  <div class="section-heading"><div><p class="eyebrow">Research outputs</p><h2 id="publications-title">Publications & manuscripts</h2></div><p>Published work by year, followed by manuscripts in progress.</p></div>
+  {% assign publication_years = site.data.work | map: 'publication_year' | compact | uniq | sort | reverse %}
+  {% for year in publication_years %}
+  <section class="publication-group" aria-labelledby="publications-{{ year }}">
+    <h3 class="publication-year" id="publications-{{ year }}">{{ year }}</h3>
+    <ul class="publication-list">
+    {% for project in site.data.work %}{% if project.publication_year == year and project.publication %}
+      {% include publication-entry.html project=project %}
+    {% endif %}{% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+  {% assign pending_publications = site.data.work | where_exp: 'project', 'project.publication != nil' | where_exp: 'project', 'project.publication_year == nil' %}
+  {% if pending_publications.size > 0 %}
+  <section class="publication-group" aria-labelledby="publications-pending">
+    <h3 class="publication-year" id="publications-pending">Under review & in preparation</h3>
+    <ul class="publication-list">
+    {% for project in pending_publications %}
+      {% include publication-entry.html project=project %}
+    {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
 </section>

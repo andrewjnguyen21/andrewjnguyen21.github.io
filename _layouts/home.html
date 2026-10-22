@@ -1,28 +1,8 @@
 ---
 layout: default
 ---
-
-{% include sections/header.html %}
-
-<main class="home-main">
-    <div class="home-grid">
-        <div class="primary-column">
-            {% include sections/author.html %}
-        </div>
-
-        <aside class="sidebar-column" aria-label="Education">
-            {% include sections/education.html %}
-        </aside>
-    </div>
-
-    <div class="home-grid">
-        <div class="primary-column">
-            {% include sections/research.html %}
-            {% include sections/projects.html %}
-        </div>
-
-        <aside class="sidebar-column" aria-label="Experience">
-            {% include sections/experience.html %}
-        </aside>
-    </div>
+<main id="main-content" class="home-main">
+  {% include sections/author.html %}
+  {% include sections/projects.html %}
+  {% include sections/research.html %}
 </main>

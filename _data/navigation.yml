@@ -1,7 +1,9 @@
 main:
-  - title: "Research"
+  - title: Research & projects
     url: /#research
-  - title: "Projects"
-    url: /#projects
-  - title: "CV"
+  - title: Publications
+    url: /#publications
+  - title: About
+    url: /#about
+  - title: CV
     url: /assets/Andy Nguyen Resume.pdf

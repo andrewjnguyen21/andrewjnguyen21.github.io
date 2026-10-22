@@ -1,0 +1,19 @@
+{% assign entry = include.project %}
+<li>
+  <article class="publication" id="{{ entry.publication }}">
+    <div class="publication-marker"><span>{{ entry.venue }}</span>{% unless entry.publication_only %}<small>First author</small>{% endunless %}</div>
+    <div class="publication-copy">
+      <h4 class="publication-title">{% if entry.paper %}<a href="{{ entry.paper }}" target="_blank" rel="noopener noreferrer">{{ entry.paper_title }}</a>{% else %}{{ entry.paper_title }}{% endif %}</h4>
+      <p class="authors">{{ entry.authors }}</p>
+      {% if entry.author_note %}<p class="author-note">{{ entry.author_note }}</p>{% endif %}
+      {% unless entry.publication_only %}
+      <nav class="publication-links" aria-label="Links for {{ entry.title }}">
+        {% if entry.paper %}<a href="{{ entry.paper }}" target="_blank" rel="noopener noreferrer">Paper</a>{% endif %}
+        {% if entry.video %}<a href="{{ entry.video }}" target="_blank" rel="noopener noreferrer">Video</a>{% endif %}
+        {% if entry.website %}<a href="{{ entry.website }}" target="_blank" rel="noopener noreferrer">Website</a>{% endif %}
+        <a class="back-to-project" href="{{ '/#project-' | append: entry.id | relative_url }}">See project</a>
+      </nav>
+      {% endunless %}
+    </div>
+  </article>
+</li>

@@ -5,9 +5,9 @@
 #
 title: Andy Nguyen
 email: andyng@umich.edu
-description: #description
-url: # the base hostname & protocol for your site
-keywords: ["blog", "jekyll"]
+description: Andy Nguyen is a University of Michigan undergraduate working across robot hardware, control, and learning.
+url: https://andrewjnguyen21.github.io
+keywords: ["robotics", "research", "control", "robot learning", "Andy Nguyen"]
 
 #
 ###################################
@@ -85,3 +85,10 @@ owner:
   codepen: #username
   reddit: #username
   telegram: #username
+# Development tools and documentation are not part of the public site.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+  - vendor

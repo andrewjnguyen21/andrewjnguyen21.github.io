@@ -1,0 +1,25 @@
+{% assign project = include.project %}
+<article class="work-card{% unless project.image %} work-text{% endunless %}" id="project-{{ project.id }}">
+  {% if project.image %}
+  {% include project-media.html image=project.image title=project.title %}
+  {% endif %}
+  <div class="work-copy">
+    <div class="work-meta"><span class="work-status">{{ project.status }}</span></div>
+    <h3>{{ project.title }}</h3>
+    <p class="work-summary">{{ project.summary }}</p>
+    <p class="role-summary"><span>My role</span> {{ project.role_summary }}</p>
+    <div class="work-links">
+      {% if project.paper %}<a href="{{ project.paper }}" target="_blank" rel="noopener noreferrer">Paper</a>{% endif %}
+      {% if project.website %}<a href="{{ project.website }}" target="_blank" rel="noopener noreferrer">Website</a>{% elsif project.video %}<a href="{{ project.video }}" target="_blank" rel="noopener noreferrer">Video</a>{% endif %}
+    </div>
+    <details class="project-details"><summary>Project details <span aria-hidden="true">+</span></summary>
+      <div class="detail-content">
+        <p class="project-context">{{ project.lab }}{% if project.period %} <span aria-hidden="true">/</span> {{ project.period }}{% endif %}</p>
+        <div class="project-story"><h4>Problem</h4><p>{{ project.problem }}</p><h4>My contribution</h4><p>{{ project.contribution }}</p><h4>Result</h4><p>{{ project.result }}</p></div>
+        <ul class="skill-tags" aria-label="Technical areas">{% for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+        {% if project.publication %}<div class="related-paper"><span class="detail-label">Related publication · {{ project.venue }}</span><a href="{{ '/#' | append: project.publication | relative_url }}">{{ project.paper_title }}</a></div>{% endif %}
+        {% if project.seasons %}<div class="seasons">{% for season in project.seasons %}<article>{% assign season_title = season.year | append: ' FTC robot' %}{% include project-media.html image=season.image title=season_title %}<div><h4>{{ season.year }} season</h4><p>{{ season.highlights }}</p><a href="{{ season.video }}" target="_blank" rel="noopener noreferrer">Watch video</a></div></article>{% endfor %}</div>{% endif %}
+      </div>
+    </details>
+  </div>
+</article>

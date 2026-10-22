@@ -1,16 +1,19 @@
-<section class="author-card" aria-labelledby="author-name">
-  <img class="author-avatar" src="{{ site.owner.avatar | relative_url }}" alt="Portrait of {{ site.owner.name }}" />
-
-  <div class="author-copy">
-    <p class="eyebrow">Robotics · Research · Engineering</p>
-    <h1 id="author-name">{{ site.owner.name }}</h1>
-    <p class="author-bio">I’m a fourth-year undergraduate at the University of Michigan pursuing B.S. degrees in Robotics and Computer Science, expected May 2027. </p>
-    <p class="author-bio">Currently applying to MS/PhD programs in Robotics.</p>
-
+<section id="about" class="hero" aria-labelledby="author-name">
+  <div class="hero-copy">
+    <p class="eyebrow">University of Michigan · Robotics & Computer Science</p>
+    <h1 id="author-name">Andy Nguyen</h1>
+    <p class="hero-statement">Robot hardware, control & learning.</p>
+    <p class="hero-bio">I’m a fourth-year undergraduate working across robot hardware, control, and learning, with research in grasping and wall climbing.</p>
     <nav class="social-links" aria-label="Contact and profiles">
       <a href="mailto:{{ site.owner.email }}">Email</a>
       <a href="https://github.com/{{ site.owner.github }}" rel="me">GitHub</a>
       <a href="https://linkedin.com/in/{{ site.owner.linkedin }}" rel="me">LinkedIn</a>
+      <a href="{{ '/assets/Andy Nguyen Resume.pdf' | relative_url }}">CV</a>
     </nav>
+    <p class="application-note"><span aria-hidden="true"></span> Applying to MS/PhD programs in Robotics · Graduating May 2027</p>
   </div>
+  <aside class="hero-profile" aria-label="Portrait and education">
+    <figure class="hero-portrait"><img src="{{ site.owner.avatar | relative_url }}" width="240" height="285" alt="Portrait of Andy Nguyen"></figure>
+    {% include sections/education.html compact=true %}
+  </aside>
 </section>
