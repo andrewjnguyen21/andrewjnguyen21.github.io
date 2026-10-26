@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="theme-color" content="#00274c">
+  <meta name="theme-color" content="#f7f6f3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
   {% feed_meta %}
@@ -12,8 +15,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  {% include sections/header.html %}
   {{ content }}
-  <footer class="site-footer"><div><a href="{{ '/' | relative_url }}">Andy Nguyen</a><p>Robotics · Control · Learning</p></div><nav aria-label="Footer contact"><a href="mailto:{{ site.owner.email }}">Email</a><a href="https://github.com/{{ site.owner.github }}">GitHub</a><a href="https://linkedin.com/in/{{ site.owner.linkedin }}">LinkedIn</a><a href="{{ '/assets/Andy Nguyen Resume.pdf' | relative_url }}">CV</a></nav><button class="motion-toggle" type="button" aria-pressed="false">Pause animations</button><small>© {{ site.time | date: '%Y' }} Andy Nguyen</small></footer>
+  <footer class="site-footer"><div><a href="{{ '/' | relative_url }}">Andy Nguyen</a><p>Robotics · Control · Learning</p></div><nav aria-label="Footer contact"><a href="mailto:{{ site.owner.email }}">Email</a><a href="https://github.com/{{ site.owner.github }}">GitHub</a><a href="https://linkedin.com/in/{{ site.owner.linkedin }}">LinkedIn</a><a href="{{ '/assets/Andy Nguyen Resume.pdf' | relative_url }}">CV</a></nav><small>© {{ site.time | date: '%Y' }} Andy Nguyen</small></footer>
 </body>
 </html>

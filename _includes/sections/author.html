@@ -1,19 +1,27 @@
 <section id="about" class="hero" aria-labelledby="author-name">
-  <div class="hero-copy">
-    <p class="eyebrow">University of Michigan · Robotics & Computer Science</p>
-    <h1 id="author-name">Andy Nguyen</h1>
-    <p class="hero-statement">Robot hardware, control & learning.</p>
-    <p class="hero-bio">I’m a fourth-year undergraduate working across robot hardware, control, and learning, with research in grasping and wall climbing.</p>
-    <nav class="social-links" aria-label="Contact and profiles">
-      <a href="mailto:{{ site.owner.email }}">Email</a>
-      <a href="https://github.com/{{ site.owner.github }}" rel="me">GitHub</a>
-      <a href="https://linkedin.com/in/{{ site.owner.linkedin }}" rel="me">LinkedIn</a>
-      <a href="{{ '/assets/Andy Nguyen Resume.pdf' | relative_url }}">CV</a>
-    </nav>
-    <p class="application-note"><span aria-hidden="true"></span> Applying to MS/PhD programs in Robotics · Graduating May 2027</p>
+  <div class="hero-top">
+    <div class="hero-id">
+      <img class="hero-photo" src="{{ site.owner.avatar | relative_url }}" width="640" height="640" alt="Portrait of Andy Nguyen">
+      <div class="hero-who">
+        <h1 id="author-name">Andy Nguyen</h1>
+        <ul class="hero-edu">
+          <li><strong>B.S. in Robotics &amp; Computer Science</strong>, University of Michigan · expected May 2027 graduation</li>
+          <li class="adv">Advised by Assistant Professor <strong>Daniel Bruder</strong></li>
+          <li>Engineering Honors Program</li>
+        </ul>
+      </div>
+    </div>
+    <div class="hero-affil" aria-label="Affiliations">
+      <a href="https://umich.edu/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/images/michigan-block-m.png' | relative_url }}" width="1161" height="830" alt="University of Michigan"></a>
+    </div>
   </div>
-  <aside class="hero-profile" aria-label="Portrait and education">
-    <figure class="hero-portrait"><img src="{{ site.owner.avatar | relative_url }}" width="240" height="285" alt="Portrait of Andy Nguyen"></figure>
-    {% include sections/education.html compact=true %}
-  </aside>
+  <div class="hero-intro">
+    <p class="hero-oneliner">I’m a fourth-year undergraduate working across robot hardware, control, and learning, with research in grasping and wall climbing.</p>
+  </div>
+  <nav class="hero-contact" aria-label="Contact and profiles">
+    <a href="mailto:{{ site.owner.email }}">Email</a>
+    <a href="https://github.com/{{ site.owner.github }}" rel="me">GitHub</a>
+    <a href="https://linkedin.com/in/{{ site.owner.linkedin }}" rel="me">LinkedIn</a>
+    <a href="{{ '/assets/Andy Nguyen Resume.pdf' | relative_url }}">CV</a>
+  </nav>
 </section>

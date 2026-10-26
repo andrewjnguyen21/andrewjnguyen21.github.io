@@ -14,7 +14,7 @@
   {% assign pending_publications = site.data.work | where_exp: 'project', 'project.publication != nil' | where_exp: 'project', 'project.publication_year == nil' %}
   {% if pending_publications.size > 0 %}
   <section class="publication-group" aria-labelledby="publications-pending">
-    <h3 class="publication-year" id="publications-pending">Under review & in preparation</h3>
+    <h3 class="publication-year" id="publications-pending">Preprints, under review & in preparation</h3>
     <ul class="publication-list">
     {% for project in pending_publications %}
       {% include publication-entry.html project=project %}

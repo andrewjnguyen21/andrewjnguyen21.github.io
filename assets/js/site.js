@@ -1,7 +1,6 @@
 (() => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const media = [...document.querySelectorAll('.project-media')];
-  const motionToggle = document.querySelector('.motion-toggle');
   const visible = new Set();
   let paused = reducedMotion.matches;
 
@@ -14,8 +13,6 @@
     }
   }
   function syncAll() {
-    motionToggle.textContent = paused ? 'Play animations' : 'Pause animations';
-    motionToggle.setAttribute('aria-pressed', String(paused));
     media.forEach(syncPlayback);
   }
   media.forEach(container => {
@@ -34,7 +31,6 @@
     });
   }, { threshold: 0.1 });
   media.forEach(container => observer.observe(container));
-  motionToggle.addEventListener('click', () => { paused = !paused; syncAll(); });
   reducedMotion.addEventListener('change', () => { paused = reducedMotion.matches; syncAll(); });
   document.addEventListener('visibilitychange', syncAll);
   syncAll();
@@ -44,6 +40,11 @@
     const project = document.getElementById(location.hash.slice(1));
     if (project) project.querySelector('details').open = true;
   }
+  function collapseProjects() {
+    document.querySelectorAll('.project-details').forEach(d => { d.open = false; });
+    if (location.hash.startsWith('#project-')) history.replaceState(null, '', location.pathname + location.search);
+  }
   window.addEventListener('hashchange', revealProject);
-  revealProject();
+  window.addEventListener('pageshow', collapseProjects);
+  collapseProjects();
 })();

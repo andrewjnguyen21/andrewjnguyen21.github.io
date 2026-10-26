@@ -14,6 +14,7 @@
   contribution: I designed the passive bistable-suction wall-climbing robot and evaluated its payload capability on plaster and glass.
   tags: [Mechanism design, Suction, Hardware validation]
   publication: wall-climbing-paper
+  first_author: true
   publication_year: 2026
   paper_title: A High-Payload Wall-Climbing Robot Using Passive Bistable Suction Cups
   authors: '<strong>Andrew Nguyen</strong>, Mingyuan Li, Daniel Bruder'
@@ -22,7 +23,7 @@
   video: https://www.youtube.com/watch?v=xeWG5IHMbxI
   website: https://bistable-suction-cup-wall-climbing.github.io/
 - id: grasping
-  result: Hardware demonstrations on seen and unseen objects; first-author manuscript currently under review.
+  result: Hardware demonstrations on seen and unseen objects; released as a first-author arXiv preprint and submitted to ICRA 2027.
   problem: Connect object geometry, reactive reaching, and tactile feedback in a modular grasping framework.
   role_summary: Grasping framework & hardware validation
   group: research
@@ -30,34 +31,54 @@
   category: Manipulation · Learning
   lab: Biomimetic Robotics Lab · MIT
   period: May–Aug. 2026
-  status: Under review
+  status: ICRA 2027 submission
   image: grasping
   featured: true
   summary: Modular three-finger grasping with reactive reaching and tactile feedback.
   contribution: I developed the three-finger grasping framework, combining geometry-based affordances, reactive reaching, and tactile/proprioceptive reinforcement learning, and demonstrated it on hardware.
   tags: [Reactive manipulation, Reinforcement learning, Tactile sensing]
   publication: grasping-paper
+  first_author: true
   paper_title: Steerable and Reactive Grasping Through Modular Design with a Three-Point Interface
   authors: '<strong>Andrew Nguyen</strong>, Yonghyeon Lee<sup>†</sup>, Sangbae Kim<sup>†</sup>'
   author_note: † Co-corresponding authors
-  venue: Under review
+  venue: arXiv preprint · submitted to ICRA 2027
   paper: https://arxiv.org/abs/2609.24896
   video: https://youtu.be/siW-URWmdz4
   website: https://heatmap-three-point-interface-grasping.github.io/
 - id: table-tennis
-  publication_only: true
-  title: Table tennis deception
-  category: Perception · Control integration
+  result: Integrated real-time ball localization with the robot's control stack for hardware testing across dynamic table-tennis skills.
+  problem: Give a high-speed table-tennis robot reliable ball state estimates and connect them to learning- and model-based controllers.
+  role_summary: Real-time perception & system integration
+  group: research
+  title: MIT Table Tennis Robot V2
+  category: Perception · Control · Learning
   lab: Biomimetic Robotics Lab · MIT
-  period: 2026
-  status: Manuscript in preparation
-  summary: Ball localization and hardware integration for a table-tennis-playing robot.
-  contribution: I implemented 220 Hz YOLO-based ball localization and assisted with MPC controller hardware integration and testing. The related manuscript on table tennis deception using reinforcement learning and contact-implicit MPC is in preparation.
+  period: May–Aug. 2026
+  status: Ongoing research
+  image: table-tennis
+  featured: true
+  summary: A custom 220 Hz perception stack for MIT's second-generation table-tennis robot.
+  contribution: I implemented 220 Hz YOLO-based ball localization and integrated it with the hardware system, assisting with MPC controller deployment and testing for the robot's table-tennis skills.
   tags: [Real-time perception, Model predictive control, System integration]
   publication: table-tennis-paper
   paper_title: Table Tennis Deception Using Reinforcement Learning and Contact-Implicit Model Predictive Control
   authors: 'David Nguyen, Annika Marschner, <strong>Andrew Nguyen</strong>, Sangbae Kim'
   venue: In preparation
+- id: flint-feedback
+  result: Demonstrated feedback-control rollouts across randomized two-link robot models in simulation.
+  problem: Track optimized motions when robot geometry and dynamics vary between systems.
+  role_summary: MPC feedback control & simulation
+  group: research
+  title: FLINT feedback control
+  category: Model predictive control · Simulation
+  lab: University of Michigan
+  period: 2026
+  status: Research project
+  image: flint-feedback
+  summary: MPC-based feedback control for randomized robot models.
+  contribution: I developed and evaluated the MPC feedback-controller workflow in FLINT, using randomized robot models to test closed-loop trajectory tracking across changing mechanisms.
+  tags: [Model predictive control, Feedback control, Robot simulation]
 - id: humanoid-simulation
   hidden: true
   title: Bringing actuator dynamics into simulation

@@ -7,6 +7,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DEMOS = {
     'wall-climbing': 'wall-climbing-landscape.gif',
     'grasping': 'grasping.gif',
+    'table-tennis': 'rl-juggle-catch.gif',
+    'flint-feedback': 'flint_feedback.gif',
     'uav': 'uav_reconfig.gif',
     'p-wheel': 'p-wheel.gif',
     'ftc-2023': 'ftc-2023.gif',

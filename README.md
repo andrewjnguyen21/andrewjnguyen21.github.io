@@ -22,9 +22,9 @@ Open <http://127.0.0.1:4000>. The `/projects/` and `/research/` routes also rema
 - `_includes/sections/education.html` contains the education details shown beside the portrait. Experience is not displayed.
 - `assets/css/style.scss` contains the layout and original navy/maize color palette.
 
-Confirmed publications use `publication_year` in `_data/work.yml` and are grouped newest year first. Manuscripts without a confirmed publication year appear under “Under review & in preparation.”
+Confirmed publications use `publication_year` in `_data/work.yml` and are grouped newest year first. Preprints and manuscripts without a confirmed publication year appear under “Preprints, under review & in preparation.”
 
-Publication links point to the corresponding publication entry. “See project” opens the matching project's contribution details. Table tennis appears only as a manuscript in preparation. Manuscripts in preparation remain distinct from published or under-review work.
+Publication links point to the corresponding publication entry. “See project” opens the matching project's contribution details. The MIT Table Tennis Robot V2 appears as a research project while its related manuscript remains in preparation. Manuscripts in preparation remain distinct from published or under-review work.
 
 ## Demo media
 

@@ -1,7 +1,7 @@
 {% assign entry = include.project %}
 <li>
   <article class="publication" id="{{ entry.publication }}">
-    <div class="publication-marker"><span>{{ entry.venue }}</span>{% unless entry.publication_only %}<small>First author</small>{% endunless %}</div>
+    <div class="publication-marker"><span>{{ entry.venue }}</span>{% if entry.first_author %}<small>First author</small>{% endif %}</div>
     <div class="publication-copy">
       <h4 class="publication-title">{% if entry.paper %}<a href="{{ entry.paper }}" target="_blank" rel="noopener noreferrer">{{ entry.paper_title }}</a>{% else %}{{ entry.paper_title }}{% endif %}</h4>
       <p class="authors">{{ entry.authors }}</p>
