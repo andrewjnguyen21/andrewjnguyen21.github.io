@@ -1,4 +1,4 @@
 <div class="project-media">
-  <img src="{{ '/assets/images/projects/' | append: include.image | append: '.jpg' | relative_url }}" alt="{{ include.title }} demonstration" width="960" height="600" loading="lazy">
-  <video autoplay muted loop playsinline preload="metadata" aria-label="{{ include.title }} demonstration" poster="{{ '/assets/images/projects/' | append: include.image | append: '.jpg' | relative_url }}"><source src="{{ '/assets/videos/' | append: include.image | append: '.mp4' | relative_url }}" type="video/mp4"></video>
+  <img src="{{ '/assets/images/projects/' | append: include.image | append: '.jpg' | relative_url }}{% if include.version %}?v={{ include.version }}{% endif %}" alt="{{ include.title }} demonstration" width="960" height="600" loading="lazy">
+  <video autoplay muted loop playsinline preload="metadata" aria-label="{{ include.title }} demonstration" poster="{{ '/assets/images/projects/' | append: include.image | append: '.jpg' | relative_url }}{% if include.version %}?v={{ include.version }}{% endif %}"><source src="{{ '/assets/videos/' | append: include.image | append: '.mp4' | relative_url }}{% if include.version %}?v={{ include.version }}{% endif %}" type="video/mp4"></video>
 </div>

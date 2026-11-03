@@ -1,7 +1,7 @@
 {% assign project = include.project %}
 <article class="work-card{% unless project.image %} work-text{% endunless %}" id="project-{{ project.id }}">
   {% if project.image %}
-  {% include project-media.html image=project.image title=project.title %}
+  {% include project-media.html image=project.image title=project.title version=project.media_version %}
   {% endif %}
   <div class="work-copy">
     <div class="work-meta">
