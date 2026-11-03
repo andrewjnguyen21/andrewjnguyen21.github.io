@@ -1,6 +1,6 @@
 <section class="work-section" id="research" aria-labelledby="projects-title">
   <span id="projects" class="anchor-alias"></span>
-  <div class="section-heading"><div><p class="eyebrow">Five selected projects</p><h2 id="projects-title">Research</h2></div><p>Robot hardware, control, perception, and learning.</p></div>
+  <div class="section-heading"><div><p class="eyebrow">Six selected projects</p><h2 id="projects-title">Research</h2></div><p>Robot hardware, control, perception, and learning.</p></div>
   <div class="work-grid">
     {% for project in site.data.work %}{% if project.group == 'research' %}{% unless project.publication_only or project.hidden %}
       {% include project-card.html project=project %}

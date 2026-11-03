@@ -8,6 +8,7 @@ DEMOS = {
     'wall-climbing': 'wall-climbing-landscape.gif',
     'grasping': 'grasping.gif',
     'table-tennis': 'rl-juggle-catch.gif',
+    'athenazero': 'rai-robot.gif',
     'flint-feedback': 'flint_feedback.gif',
     'uav': 'uav_reconfig.gif',
     'p-wheel': 'p-wheel.gif',

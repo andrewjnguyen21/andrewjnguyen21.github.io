@@ -65,6 +65,27 @@
   paper_title: Table Tennis Deception Using Reinforcement Learning and Contact-Implicit Model Predictive Control
   authors: 'David Nguyen, Annika Marschner, <strong>Andrew Nguyen</strong>, Sangbae Kim'
   venue: In preparation
+- id: athenazero
+  result: The resulting platform achieved a human-comparable effective endpoint mass and demonstrated throwing above 30 m/s, with catching and batting above 14 m/s.
+  problem: Build a bimanual manipulator with low effective inertia and high control authority for fast, contact-rich tasks at human-comparable timescales.
+  role_summary: Hardware intern · actuator testing & assembly (not a paper author)
+  group: research
+  title: AthenaZero
+  category: Dynamic manipulation · Robot hardware
+  lab: RAI Institute · formerly Boston Dynamics AI Institute
+  period: May–Aug. 2024 & 2025
+  status: Science Robotics 2026
+  image: athenazero
+  summary: Low-inertia bimanual hardware for throwing, catching, and batting at human-comparable speeds.
+  contribution: Across two summer internships, I built an automated Python motor-dynamometer test suite, characterized actuator friction and torque–velocity behavior, designed a 1-DOF camera mount, and assembled 40 quasi-direct-drive actuators using custom test fixtures.
+  tags: [Actuator characterization, Hardware integration, Test automation]
+  project_publication: true
+  not_author: true
+  paper_title: 'AthenaZero: A low-inertia, bimanual robot for dynamic manipulation'
+  authors: 'Andrew S. Morgan <em>et al.</em>'
+  venue: 'Science Robotics 11, eaee1868 (2026)'
+  paper: https://www.science.org/doi/10.1126/scirobotics.aee1868
+  website: https://rai-inst.com/resources/blog/bimanual-robot-for-dynamic-manipulation/
 - id: flint-feedback
   result: Demonstrated feedback-control rollouts across randomized two-link robot models in simulation.
   problem: Track optimized motions when robot geometry and dynamics vary between systems.
