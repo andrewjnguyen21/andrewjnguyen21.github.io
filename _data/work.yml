@@ -120,7 +120,7 @@
   lab: FREE Lab · University of Michigan
   status: Research project
   image: uav
-  media_version: tangent-circle-v3
+  media_version: piper-circle-to-v-v5
   summary: Simulation and control for interconnected fixed-wing formations.
   contribution: I developed the simulation and control stack for interconnected fixed-wing UAV formations.
   tags: [Simulation, Formation control, Waypoint following]
