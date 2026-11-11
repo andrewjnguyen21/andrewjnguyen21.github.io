@@ -6,7 +6,7 @@
     <div class="work-meta">
       <span class="work-status{% if project.status contains 'Ongoing' or project.status contains 'present' %} status-ongoing{% endif %}">{{ project.status }}</span>
       {% if project.period %}<span>{{ project.period }}</span>{% endif %}
-      {% if project.lab %}<span>{{ project.lab }}</span>{% endif %}
+      {% if project.lab %}<span>{% if project.lab_url %}<a href="{{ project.lab_url }}" target="_blank" rel="noopener noreferrer">{{ project.lab }}</a>{% else %}{{ project.lab }}{% endif %}</span>{% endif %}
       {% if project.role_summary %}<span class="role-summary"><strong>My role</strong> {{ project.role_summary }}</span>{% endif %}
     </div>
   </header>

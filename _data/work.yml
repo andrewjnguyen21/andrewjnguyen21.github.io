@@ -6,6 +6,7 @@
   title: High-payload wall climbing
   category: Mechanical design · Control
   lab: FREE Lab · University of Michigan
+  lab_url: https://www.freelaboratory.org/
   period: 2023–present
   status: ICRA 2026
   image: wall-climbing
@@ -35,6 +36,7 @@
   title: Steerable & reactive grasping
   category: Manipulation · Learning
   lab: Biomimetic Robotics Lab · MIT
+  lab_url: https://biomimetics.mit.edu/
   period: May–Aug. 2026
   status: ICRA 2027 submission
   image: grasping
@@ -66,6 +68,7 @@
   title: MIT Table Tennis Robot V2
   category: Perception · Control · Learning
   lab: Biomimetic Robotics Lab · MIT
+  lab_url: https://biomimetics.mit.edu/
   period: May–Aug. 2026
   status: Ongoing research
   image: table-tennis
@@ -90,6 +93,7 @@
   title: AthenaZero
   category: Dynamic manipulation · Robot hardware
   lab: RAI Institute · formerly Boston Dynamics AI Institute
+  lab_url: https://rai-inst.com/
   period: May–Aug. 2024 & 2025
   status: Science Robotics 2026
   image: athenazero
@@ -116,7 +120,8 @@
   group: research
   title: FLINT feedback control
   category: Model predictive control · Simulation
-  lab: University of Michigan
+  lab: ROAHM Lab · University of Michigan
+  lab_url: https://www.roahmlab.com/
   period: 2026
   status: Research project
   image: flint-feedback
@@ -128,6 +133,7 @@
   title: Bringing actuator dynamics into simulation
   category: Simulation · Learning
   lab: ROAHM / ARCAD Lab · Schaeffler project
+  lab_url: https://www.roahmlab.com/
   period: Sep. 2025–May 2026
   status: Research project
   summary: Connecting a humanoid simulation to measured actuator behavior.
@@ -141,6 +147,7 @@
   title: Coordinating fixed-wing UAV formations
   category: Simulation · Control
   lab: FREE Lab · University of Michigan
+  lab_url: https://www.freelaboratory.org/
   status: Research project
   image: uav
   media_version: piper-circle-to-v-v5
