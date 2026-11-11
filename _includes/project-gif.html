@@ -1,0 +1,4 @@
+{% assign demo = include.demo %}
+<div class="project-gif-frame{% if include.cover %} project-media{% endif %}{% if demo.shape %} project-gif-{{ demo.shape }}{% endif %}">
+  <img src="{{ '/assets/images/projects/' | append: demo.file | append: '.jpg' | relative_url }}" data-gif="{{ '/assets/gifs/projects/' | append: demo.file | append: '.gif' | relative_url }}" alt="{{ demo.description | escape }}" width="{% if demo.shape == 'portrait' %}253{% else %}800{% endif %}" height="{% if demo.shape == 'square' %}800{% else %}450{% endif %}" loading="lazy">
+</div>

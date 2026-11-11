@@ -9,6 +9,11 @@
   period: 2023–present
   status: ICRA 2026
   image: wall-climbing
+  demos:
+    - file: wall-climbing
+      description: The wall-climbing robot ascending with an 8 kg payload.
+    - file: wall-climbing-cup
+      description: A close-up of the bistable suction cup snapping between its two shapes.
   featured: true
   summary: Passive suction enables an 8 kg payload on plaster and glass.
   contribution: I designed the passive bistable-suction wall-climbing robot and evaluated its payload capability on plaster and glass.
@@ -33,12 +38,19 @@
   period: May–Aug. 2026
   status: ICRA 2027 submission
   image: grasping
+  demos:
+    - file: grasping
+      description: The three-finger robot hand grasping and lifting a Pringles can.
+    - file: grasping-heatmap
+      description: A mustard bottle mesh goes through surface sampling, contact placement and scoring, and the final grasp heatmap.
+      shape: square
   featured: true
   summary: Modular three-finger grasping with reactive reaching and tactile feedback.
   contribution: I developed the three-finger grasping framework, combining geometry-based affordances, reactive reaching, and tactile/proprioceptive reinforcement learning, and demonstrated it on hardware.
   tags: [Reactive manipulation, Reinforcement learning, Tactile sensing]
   publication: grasping-paper
   first_author: true
+  publication_year: 2026
   paper_title: Steerable and Reactive Grasping Through Modular Design with a Three-Point Interface
   authors: '<strong>Andrew Nguyen</strong>, Yonghyeon Lee<sup>†</sup>, Sangbae Kim<sup>†</sup>'
   author_note: † Co-corresponding authors
@@ -57,6 +69,11 @@
   period: May–Aug. 2026
   status: Ongoing research
   image: table-tennis
+  demos:
+    - file: table-tennis
+      description: The MIT table-tennis robot juggling and catching a ball with its paddle.
+    - file: table-tennis-rally
+      description: The table-tennis robot returning shots during a rally with a human player.
   featured: true
   summary: A custom 220 Hz perception stack for MIT's second-generation table-tennis robot.
   contribution: I implemented 220 Hz YOLO-based ball localization and integrated it with the hardware system, assisting with MPC controller deployment and testing for the robot's table-tennis skills.
@@ -76,6 +93,12 @@
   period: May–Aug. 2024 & 2025
   status: Science Robotics 2026
   image: athenazero
+  demos:
+    - file: athenazero
+      description: The AthenaZero bimanual robot in a dynamic manipulation demonstration.
+    - file: athenazero-juggling
+      description: AthenaZero juggling three balls in the RAI Institute demonstration.
+  demo_source: https://www.youtube.com/watch?v=tAPvN-tQpX0
   summary: Low-inertia bimanual hardware for throwing, catching, and batting at human-comparable speeds.
   contribution: Across two summer internships, I built an automated Python motor-dynamometer test suite, characterized actuator friction and torque–velocity behavior, designed a 1-DOF camera mount, and assembled 40 quasi-direct-drive actuators using custom test fixtures.
   tags: [Actuator characterization, Hardware integration, Test automation]
@@ -124,6 +147,19 @@
   summary: Simulation and control for interconnected fixed-wing formations.
   contribution: I developed the simulation and control stack for interconnected fixed-wing UAV formations.
   tags: [Simulation, Formation control, Waypoint following]
+- id: roof-inspection
+  group: engineering
+  title: Autonomous Tensile Roof Inspection Robot
+  category: Robotics · Capstone design
+  lab: University of Michigan
+  period: Aug. 2026–present
+  status: Ongoing capstone
+  summary: A robot designed to inspect tensile roofs autonomously and reduce the need for hazardous manual inspections.
+  role_summary: Robot design, prototyping & interface testing
+  problem: Inspect tensile roof structures without sending people into hazardous areas for routine checks.
+  contribution: I co-design the robot with my capstone team, prototype critical components, and test how they fit and work together before system integration.
+  result: The project is in progress. Early prototypes and interface tests help identify problems before full system integration.
+  tags: [Autonomous inspection, Rapid prototyping, System integration]
 - id: p-wheel
   result: Our team ranked first in the cohort and was one of four selected to pitch to venture capitalists.
   problem: Measure stream velocity without pumps or wall power and provide interactive feedback.
@@ -138,6 +174,22 @@
   summary: Fluid-driven flow sensing with real-time LED and LCD feedback.
   contribution: I designed the fluid-driven paddle wheel and encoder sensing system, and built an LED and LCD feedback loop that gamifies aim against cohort high scores.
   tags: [Mechanical design, Sensing, Embedded feedback]
+- id: chunk-it
+  group: engineering
+  title: Chunk It!
+  category: Web development · Entrepreneurship
+  lab: Chunk It! · Student venture
+  period: Jan.–Aug. 2024
+  status: $3,000 pitch prize
+  screenshot: chunk-it.png
+  image_alt: "Chunk It! prototype showing a weekly calendar, a break reminder, and a color legend for classes, work, and other activities."
+  summary: A student planner with adaptive task duration estimates. The project placed third out of 11 teams at Bates College’s Bobcat Ventures Pitch Competition.
+  role_summary: Co-founder · JavaScript prototype
+  problem: Students need a way to plan their days when they are unsure how long assignments and other tasks will take.
+  contribution: I built a JavaScript web prototype to help students plan their days using adaptive estimates of how long tasks take.
+  result: Our team won $3,000 and placed third out of 11 teams at the 2024 Bobcat Ventures Pitch Competition.
+  press: https://www.bates.edu/news/2024/05/17/bobcat-ventures-pitch-competition-awards-15000-in-prize-to-three-student-entrepreneurs/
+  tags: [JavaScript, Web prototyping, Time management]
 - id: ftc
   result: Team highlights include a 2022 World Championship finalist finish, six state championships, and a 2023 World Championship Innovate Award second-place finish.
   problem: Design, program, and refine competition robots while leading a team.

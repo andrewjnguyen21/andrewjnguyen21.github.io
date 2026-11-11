@@ -1,29 +1,69 @@
 {% assign project = include.project %}
-<article class="work-card{% unless project.image %} work-text{% endunless %}" id="project-{{ project.id }}">
-  {% if project.image %}
-  {% include project-media.html image=project.image title=project.title version=project.media_version %}
-  {% endif %}
-  <div class="work-copy">
+<article class="work-card{% if project.demos.size > 1 %} work-media-pair{% endif %}{% unless project.image or project.screenshot %} work-text{% endunless %}" id="project-{{ project.id }}" style="--project-transition: project-{{ project.id }}">
+  <header class="project-card-heading">
+    <h3 id="project-title-{{ project.id }}">{{ project.title }}</h3>
+    {% if project.category %}<p class="work-category">{{ project.category }}</p>{% endif %}
     <div class="work-meta">
       <span class="work-status{% if project.status contains 'Ongoing' or project.status contains 'present' %} status-ongoing{% endif %}">{{ project.status }}</span>
-      {% if project.period %}<span class="work-period">{{ project.period }}</span>{% endif %}
+      {% if project.period %}<span>{{ project.period }}</span>{% endif %}
+      {% if project.lab %}<span>{{ project.lab }}</span>{% endif %}
+      {% if project.role_summary %}<span class="role-summary"><strong>My role</strong> {{ project.role_summary }}</span>{% endif %}
     </div>
-    <h3>{{ project.title }}</h3>
-    {% if project.category %}<p class="work-category">{{ project.category }}</p>{% endif %}
-    <p class="work-summary">{{ project.summary }}</p>
-    <p class="role-summary"><span>My role</span> {{ project.role_summary }}</p>
-    <div class="work-links">
-      {% if project.paper %}<a href="{{ project.paper }}" target="_blank" rel="noopener noreferrer">Paper</a>{% endif %}
-      {% if project.website %}<a href="{{ project.website }}" target="_blank" rel="noopener noreferrer">Website</a>{% elsif project.video %}<a href="{{ project.video }}" target="_blank" rel="noopener noreferrer">Video</a>{% endif %}
+  </header>
+  {% if project.demos or project.screenshot or project.image %}
+  <div class="project-media-strip">
+    {% if project.demos %}
+      {% include project-gif.html demo=project.demos.first cover=true %}
+      {% for demo in project.demos offset:1 limit:1 %}
+        {% include project-gif.html demo=demo %}
+      {% endfor %}
+    {% elsif project.screenshot %}
+    <div class="project-media project-screenshot">
+      <img src="{{ '/assets/images/projects/' | append: project.screenshot | relative_url }}" alt="{{ project.image_alt | escape }}" width="800" height="500" loading="lazy">
     </div>
-    <details class="project-details"><summary>Project details <span aria-hidden="true">+</span></summary>
-      <div class="detail-content">
-        <p class="project-context">{{ project.lab }}</p>
-        <div class="project-story"><h4>Problem</h4><p>{{ project.problem }}</p><h4>My contribution</h4><p>{{ project.contribution }}</p><h4>Result</h4><p>{{ project.result }}</p></div>
-        <ul class="skill-tags" aria-label="Technical areas">{% for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
-        {% if project.publication %}<div class="related-paper"><span class="detail-label">Related publication · {{ project.venue }}</span><a href="{{ '/#' | append: project.publication | relative_url }}">{{ project.paper_title }}</a></div>{% elsif project.project_publication %}<div class="related-paper"><span class="detail-label">Project publication · {{ project.venue }}{% if project.not_author %} · I am not an author{% endif %}</span><a href="{{ project.paper }}" target="_blank" rel="noopener noreferrer">{{ project.authors }}, “{{ project.paper_title }}.”</a></div>{% endif %}
-        {% if project.seasons %}<div class="seasons">{% for season in project.seasons %}<article>{% assign season_title = season.year | append: ' FTC robot' %}{% include project-media.html image=season.image title=season_title %}<div><h4>{{ season.year }} season</h4><p>{{ season.highlights }}</p><a href="{{ season.video }}" target="_blank" rel="noopener noreferrer">Watch video</a></div></article>{% endfor %}</div>{% endif %}
-      </div>
-    </details>
+    {% elsif project.image %}
+      {% include project-media.html image=project.image title=project.title version=project.media_version %}
+    {% endif %}
   </div>
+  {% endif %}
+  <details class="project-details" name="project-details">
+    <summary aria-labelledby="project-title-{{ project.id }}">
+      <span class="project-toggle-icon" aria-hidden="true"></span>
+    </summary>
+    <div class="detail-content">
+      <p class="work-summary">{{ project.summary }}</p>
+      <div class="project-story">
+        <section><h4>Problem</h4><p>{{ project.problem }}</p></section>
+        <section><h4>My contribution</h4><p>{{ project.contribution }}</p></section>
+        <section><h4>Result</h4><p>{{ project.result }}</p></section>
+      </div>
+      <div class="project-resources">
+        <ul class="skill-tags" aria-label="Technical areas">
+          {% for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}
+        </ul>
+        <div class="work-links">{% if project.paper %}<a href="{{ project.paper }}" target="_blank" rel="noopener noreferrer">Paper</a>{% endif %}{% if project.website %}<a href="{{ project.website }}" target="_blank" rel="noopener noreferrer">Website</a>{% elsif project.video and project.seasons == nil %}<a href="{{ project.video }}" target="_blank" rel="noopener noreferrer">Video</a>{% endif %}{% if project.demo_source %}<a href="{{ project.demo_source }}" target="_blank" rel="noopener noreferrer">RAI juggling video</a>{% endif %}{% if project.press %}<a href="{{ project.press }}" target="_blank" rel="noopener noreferrer">Competition coverage</a>{% endif %}</div>
+      </div>
+      {% if project.publication %}
+      <div class="related-paper">
+        <span class="detail-label">Related publication · {{ project.venue }}</span>
+        <a href="{{ '/#' | append: project.publication | relative_url }}">{{ project.paper_title }}</a>
+      </div>
+      {% elsif project.project_publication %}
+      <div class="related-paper">
+        <span class="detail-label">Project publication · {{ project.venue }}{% if project.not_author %} · I am not an author{% endif %}</span>
+        <a href="{{ project.paper }}" target="_blank" rel="noopener noreferrer">{{ project.authors }}, “{{ project.paper_title }}.”</a>
+      </div>
+      {% endif %}
+    </div>
+  </details>
+  {% if project.seasons %}
+  <div class="seasons" aria-label="Competition seasons">
+    {% for season in project.seasons %}
+    <article>
+      <h4><a href="{{ season.video }}" target="_blank" rel="noopener noreferrer">{{ season.year }} season video</a></h4>
+      <p>{{ season.highlights }}</p>
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
 </article>

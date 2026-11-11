@@ -1,0 +1,8 @@
+<div class="work-grid">
+  {% for project in include.projects %}
+    {% assign position_in_row = forloop.index0 | modulo: 2 %}
+    {% if position_in_row == 0 %}<div class="work-row">{% endif %}
+    {% include project-card.html project=project %}
+    {% if position_in_row == 1 or forloop.last %}</div>{% endif %}
+  {% endfor %}
+</div>

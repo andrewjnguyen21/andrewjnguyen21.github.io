@@ -1,17 +1,11 @@
 <section class="work-section" id="research" aria-labelledby="projects-title">
   <span id="projects" class="anchor-alias"></span>
   <div class="section-heading"><div><p class="eyebrow">Six selected projects</p><h2 id="projects-title">Research</h2></div><p>Robot hardware, control, perception, and learning.</p></div>
-  <div class="work-grid">
-    {% for project in site.data.work %}{% if project.group == 'research' %}{% unless project.publication_only or project.hidden %}
-      {% include project-card.html project=project %}
-    {% endunless %}{% endif %}{% endfor %}
-  </div>
+  {% assign research_projects = site.data.work | where: 'group', 'research' | where_exp: 'project', 'project.publication_only != true' | where_exp: 'project', 'project.hidden != true' %}
+  {% include project-grid.html projects=research_projects %}
 </section>
 <section class="work-section engineering-section" aria-labelledby="engineering-title">
-  <div class="section-heading"><div><p class="eyebrow">Additional work</p><h2 id="engineering-title">Engineering projects</h2></div><p>Hands-on systems and competition robotics.</p></div>
-  <div class="work-grid">
-    {% for project in site.data.work %}{% if project.group == 'engineering' %}{% unless project.hidden %}
-      {% include project-card.html project=project %}
-    {% endunless %}{% endif %}{% endfor %}
-  </div>
+  <div class="section-heading"><div><p class="eyebrow">Additional work</p><h2 id="engineering-title">Engineering projects</h2></div><p>Robotics capstone, web development, and hands-on systems.</p></div>
+  {% assign engineering_projects = site.data.work | where: 'group', 'engineering' | where_exp: 'project', 'project.hidden != true' %}
+  {% include project-grid.html projects=engineering_projects %}
 </section>
