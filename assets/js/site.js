@@ -13,7 +13,6 @@
   document.querySelectorAll('.project-media > video:not(.project-demo)').forEach(video => {
     const container = video.parentElement;
     video.muted = true;
-    if (reducedMotion.matches) video.autoplay = false;
     video.addEventListener('play', () => container.classList.add('is-playing'));
     video.addEventListener('pause', () => container.classList.remove('is-playing'));
     video.addEventListener('error', () => container.classList.remove('is-playing'));
