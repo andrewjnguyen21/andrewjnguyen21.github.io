@@ -10,7 +10,7 @@
   function syncAll() {
     playback.forEach(sync => sync());
   }
-  document.querySelectorAll('.project-media > video').forEach(video => {
+  document.querySelectorAll('.project-media > video:not(.project-demo)').forEach(video => {
     const container = video.parentElement;
     video.muted = true;
     if (reducedMotion.matches) video.autoplay = false;
@@ -23,25 +23,28 @@
     });
   });
 
-  document.querySelectorAll('img[data-gif]').forEach(image => {
-    const frame = image.parentElement;
+  document.querySelectorAll('video.project-demo').forEach(video => {
+    const frame = video.parentElement;
     const card = frame.closest('.work-card');
     const row = card.closest('.work-row');
     const details = card.querySelector('.project-details');
     const cover = frame.classList.contains('project-media');
-    const poster = image.getAttribute('src');
+    video.muted = true;
+    video.addEventListener('playing', () => frame.classList.add('is-playing'));
+    video.addEventListener('error', () => frame.classList.remove('is-playing'), true);
 
-    function syncGif() {
+    function syncDemo() {
       const showing = details.open || (cover && !(desktopProjects.matches && row.querySelector('.project-details[open]')));
-      const source = showing && !reducedMotion.matches && inView(frame) ? image.dataset.gif : poster;
-      if (image.getAttribute('src') !== source) image.setAttribute('src', source);
+      if (showing && !reducedMotion.matches && inView(frame)) {
+        if (video.preload === 'none') video.preload = 'auto';
+        video.play().catch(() => frame.classList.remove('is-playing'));
+      } else {
+        video.pause();
+      }
     }
 
-    image.addEventListener('error', () => {
-      if (image.getAttribute('src') !== poster) image.setAttribute('src', poster);
-    });
-    row.addEventListener('toggle', syncGif, true);
-    playback.set(frame, syncGif);
+    row.addEventListener('toggle', syncDemo, true);
+    playback.set(frame, syncDemo);
   });
   const observer = new IntersectionObserver(entries => {
     entries.forEach(({ target, isIntersecting }) => {

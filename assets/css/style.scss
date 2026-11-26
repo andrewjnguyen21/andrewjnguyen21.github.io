@@ -301,13 +301,23 @@ a:focus-visible,button:focus-visible,summary:focus-visible {
 .project-gif-square {
   aspect-ratio:1;
 }
+.project-placeholder {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  border:1px dashed var(--line-strong);
+}
 .project-screenshot {
   background:#fff;
 }
 .project-screenshot>img {
   object-fit:contain;
 }
-.project-media>video {
+.project-media>video,.project-gif-frame>video {
   width:100%;
   height:100%;
   position:absolute;
@@ -316,7 +326,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible {
   opacity:0;
   pointer-events:none;
 }
-.project-media.is-playing>video {
+.project-media.is-playing>video,.project-gif-frame.is-playing>video {
   opacity:1;
 }
 .work-meta {
