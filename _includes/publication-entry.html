@@ -3,7 +3,7 @@
   <article class="publication" id="{{ entry.publication }}">
     <div class="publication-marker"><span>{{ entry.venue }}</span>{% if entry.first_author %}<small>First author</small>{% endif %}</div>
     <div class="publication-copy">
-      <h4 class="publication-title">{% if entry.paper %}<a href="{{ entry.paper }}" target="_blank" rel="noopener noreferrer">{{ entry.paper_title }}</a>{% else %}{{ entry.paper_title }}{% endif %}</h4>
+      <h4 class="publication-title">{% if entry.paper %}<a href="{{ entry.paper }}" target="_blank" rel="noopener noreferrer">{{ entry.paper_title }}</a>{% elsif entry.publication_only %}{{ entry.paper_title }}{% else %}<a href="{{ '/#project-' | append: entry.id | relative_url }}">{{ entry.paper_title }}</a>{% endif %}</h4>
       <p class="authors">{{ entry.authors }}</p>
       {% if entry.author_note %}<p class="author-note">{{ entry.author_note }}</p>{% endif %}
       {% unless entry.publication_only %}

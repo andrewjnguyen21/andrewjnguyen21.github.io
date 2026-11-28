@@ -128,6 +128,11 @@
   summary: MPC-based feedback control for randomized robot models.
   contribution: I developed and evaluated the MPC feedback-controller workflow in FLINT, using randomized robot models to test closed-loop trajectory tracking across changing mechanisms.
   tags: [Model predictive control, Feedback control, Robot simulation]
+  publication: flint-feedback-paper
+  first_author: true
+  paper_title: 'ZOOM: Fast and Robust Feedback Control for Uncertain Dynamics'
+  authors: '<strong>Andrew Nguyen</strong>, Ryan Tsai, Ram Vasudevan'
+  venue: In preparation · RSS 2027
 - id: humanoid-simulation
   hidden: true
   title: Bringing actuator dynamics into simulation
@@ -154,6 +159,11 @@
   summary: Simulation and control for interconnected fixed-wing formations.
   contribution: I developed the simulation and control stack for interconnected fixed-wing UAV formations.
   tags: [Simulation, Formation control, Waypoint following]
+  publication: uav-formations-paper
+  first_author: true
+  paper_title: Interconnected Fixed-Wing UAVs for Increased Efficiency and Maneuverability
+  authors: '<strong>Andrew Nguyen</strong>, Daniel Bruder'
+  venue: In preparation · RSS 2027
 - id: roof-inspection
   group: engineering
   title: Autonomous Tensile Roof Inspection Robot
