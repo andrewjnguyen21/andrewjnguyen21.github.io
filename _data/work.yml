@@ -132,7 +132,7 @@
   first_author: true
   paper_title: 'ZOOM: Fast and Robust Feedback Control for Uncertain Dynamics'
   authors: '<strong>Andrew Nguyen</strong>, Ryan Tsai, Ram Vasudevan'
-  venue: In preparation · RSS 2027
+  venue: In preparation
 - id: humanoid-simulation
   hidden: true
   title: Bringing actuator dynamics into simulation
@@ -163,7 +163,7 @@
   first_author: true
   paper_title: Interconnected Fixed-Wing UAVs for Increased Efficiency and Maneuverability
   authors: '<strong>Andrew Nguyen</strong>, Daniel Bruder'
-  venue: In preparation · RSS 2027
+  venue: In preparation
 - id: roof-inspection
   group: engineering
   title: Autonomous Tensile Roof Inspection Robot
